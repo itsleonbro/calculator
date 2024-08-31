@@ -12,10 +12,38 @@
         <input type="text" id="screen" disabled />
         <div class="buttons">
           <div>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteOneValue()">DEL</button>
+
+            <button onclick="displayToScreen('/')">/</button>
+          </div>
+
+          <div>
             <button onclick="displayToScreen('1')">7</button>
             <button onclick="displayToScreen('2')">8</button>
             <button onclick="displayToScreen('9')">9</button>
             <button onclick="displayToScreen('*')">X</button>
+          </div>
+
+          <div>
+            <button onclick="displayToScreen('4')">4</button>
+            <button onclick="displayToScreen('5')">5</button>
+            <button onclick="displayToScreen('6')">6</button>
+            <button onclick="displayToScreen('-')">-</button>
+          </div>
+
+          <div>
+            <button onclick="displayToScreen('1')">1</button>
+            <button onclick="displayToScreen('2')">2</button>
+            <button onclick="displayToScreen('3')">3</button>
+            <button onclick="displayToScreen('+')">+</button>
+          </div>
+
+          <div>
+            <button onclick="displayToScreen('0')">0</button>
+            <button onclick="displayToScreen('.')">.</button>
+
+            <button onclick="calculateResult()">=</button>
           </div>
         </div>
       </div>

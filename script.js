@@ -19,9 +19,11 @@ function deleteOneValue() {
 }
 
 function calculateResult() {
+  if (screen.value) {
     try {
       screen.value = eval(screen.value);
     } catch (error) {
       screen.value = "Oops";
     }
   }
+}

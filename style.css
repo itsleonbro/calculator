@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --faded-blue: #222831;
+  --faded-black: #393c41;
+  --white: #fff;
+  --light-grey: #545961;
+  --yellow: #00adb5;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--faded-blue);
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-container .screen {
+  color: var(--white);
+  height: 100px;
+  background: transparent;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.buttons button {
+  color: var(--white);
+  font-size: 23px;
+  background-color: var(--faded-black);
+  width: 80px;
+  height: 80px;
+  border: none;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: inset 0 3px 5px rgba(255, 255, 255, 0.2);
+}
+
+.buttons button:hover {
+  background-color: var(--light-grey);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+.buttons .long-btns {
+  width: 170px;
+  height: 100px;
+}
+
+.operator {
+  background-color: var(--yellow) !important;
+}

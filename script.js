@@ -17,3 +17,11 @@ function deleteOneValue() {
     screen.value = currentValue.slice(0, -1);
   }
 }
+
+function calculateResult() {
+    try {
+      screen.value = eval(screen.value);
+    } catch (error) {
+      screen.value = "Oops";
+    }
+  }

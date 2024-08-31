@@ -12,10 +12,10 @@ function deleteOneValue() {
   // get the current value of the display
   const currentValue = screen.value;
 
-  // removes the last character if there's any
-  if (currentValue.length > 0) {
+  // removes the last character if its numbers, if its string it erases all
+  if (currentValue.length > 0 && !isNaN(currentValue)) {
     screen.value = currentValue.slice(0, -1);
-  }
+  } else screen.value = "";
 }
 
 function calculateResult() {

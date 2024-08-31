@@ -9,41 +9,42 @@
   <body>
     <section class="main-content">
       <div class="calculator">
-        <input type="text" id="screen" disabled />
-        <div class="buttons">
-          <div>
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="deleteOneValue()">DEL</button>
+        <div class="calculator-container">
+          <input type="text" id="screen" disabled class="screen" />
+          <div class="buttons">
+            <div>
+              <button onclick="displayToScreen('1')">7</button>
+              <button onclick="displayToScreen('2')">8</button>
+              <button onclick="displayToScreen('9')">9</button>
+              <button class="operator" onclick="displayToScreen('*')">x</button>
+            </div>
 
-            <button onclick="displayToScreen('/')">/</button>
-          </div>
+            <div>
+              <button onclick="displayToScreen('4')">4</button>
+              <button onclick="displayToScreen('5')">5</button>
+              <button onclick="displayToScreen('6')">6</button>
+              <button class="operator" onclick="displayToScreen('-')">-</button>
+            </div>
 
-          <div>
-            <button onclick="displayToScreen('1')">7</button>
-            <button onclick="displayToScreen('2')">8</button>
-            <button onclick="displayToScreen('9')">9</button>
-            <button onclick="displayToScreen('*')">X</button>
-          </div>
+            <div>
+              <button onclick="displayToScreen('1')">1</button>
+              <button onclick="displayToScreen('2')">2</button>
+              <button onclick="displayToScreen('3')">3</button>
+              <button class="operator" onclick="displayToScreen('+')">+</button>
+            </div>
 
-          <div>
-            <button onclick="displayToScreen('4')">4</button>
-            <button onclick="displayToScreen('5')">5</button>
-            <button onclick="displayToScreen('6')">6</button>
-            <button onclick="displayToScreen('-')">-</button>
-          </div>
+            <div>
+              <button onclick="displayToScreen('.')">.</button>
+              <button onclick="displayToScreen('0')">0</button>
+              <button onclick="deleteOneValue()">DEL</button>
 
-          <div>
-            <button onclick="displayToScreen('1')">1</button>
-            <button onclick="displayToScreen('2')">2</button>
-            <button onclick="displayToScreen('3')">3</button>
-            <button onclick="displayToScreen('+')">+</button>
-          </div>
+              <button class="operator" onclick="displayToScreen('/')">/</button>
+            </div>
 
-          <div>
-            <button onclick="displayToScreen('0')">0</button>
-            <button onclick="displayToScreen('.')">.</button>
-
-            <button onclick="calculateResult()">=</button>
+            <div>
+              <button class="long-btns" onclick="calculateResult()">=</button>
+              <button class="long-btns" onclick="clearDisplay()">C</button>
+            </div>
           </div>
         </div>
       </div>

@@ -27,3 +27,19 @@ function calculateResult() {
     }
   }
 }
+
+document.addEventListener("keydown", function (event) {
+  const key = event.key;
+
+  if (key === " ") {
+    event.preventDefault(); // prevents the spacebar from adding a space
+  } else if (!isNaN(key) || "+-*/.".includes(key)) {
+    displayToScreen(key);
+  } else if (key === "Enter") {
+    calculateResult();
+  } else if (key === "Backspace") {
+    deleteOneValue();
+  } else if (key === "Escape") {
+    clearDisplay();
+  }
+});

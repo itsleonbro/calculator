@@ -3,6 +3,15 @@ const screen = document.getElementById("screen");
 function displayToScreen(input) {
   const lastChar = screen.value.slice(-1);
 
+  switch (screen.value) {
+    case "Error":
+      clearDisplay();
+      break;
+    case "Oops":
+      clearDisplay();
+      break;
+  }
+
   if (screen.value === "" || isNaN(lastChar)) {
     if (!isNaN(input)) {
       screen.value += input;

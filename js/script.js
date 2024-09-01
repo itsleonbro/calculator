@@ -38,7 +38,13 @@ function deleteOneValue() {
 function calculateResult() {
   if (screen.value) {
     try {
-      screen.value = eval(screen.value);
+      const result = eval(screen.value);
+
+      if (result === Infinity || result === -Infinity || isNaN(result)) {
+        screen.value = "Error";
+      } else {
+        screen.value = result;
+      }
     } catch (error) {
       screen.value = "Oops";
     }

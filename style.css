@@ -5,7 +5,7 @@
   --faded-black: #393c41;
   --white: #fff;
   --light-grey: #545961;
-  --yellow: #00adb5;
+  --blue: #00adb5;
 }
 
 body {
@@ -76,5 +76,5 @@ body {
 }
 
 .operator {
-  background-color: var(--yellow) !important;
+  background-color: var(--blue) !important;
 }

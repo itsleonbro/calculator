@@ -1,7 +1,15 @@
 const screen = document.getElementById("screen");
 
 function displayToScreen(input) {
+  const lastChar = screen.value.slice(-1);
+
+  if (screen.value === "" || isNaN(lastChar)) {
+    if (!isNaN(input)) {
       screen.value += input;
+    }
+  } else if (!isNaN(lastChar)) {
+    screen.value += input;
+  }
 }
 
 function clearDisplay() {
